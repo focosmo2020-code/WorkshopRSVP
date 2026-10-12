@@ -1,0 +1,54 @@
+@model List<RSVP>
+
+@{
+	ViewData["Title"] = "Workshop Registrations";
+	var registrationsByWorkshop = ViewData["RegistrationsByWorkshop"] as Dictionary<string, List<RSVP>>;
+}
+
+<h1>Workshop Registrations</h1>
+<p class="lead">Total registrations: <strong>@Model.Count</strong></p>
+
+@if (registrationsByWorkshop != null && registrationsByWorkshop.Count > 0)
+{
+	@foreach (var workshop in registrationsByWorkshop.OrderBy(x => x.Key))
+	{
+		<div class="card mb-4">
+			<div class="card-header">
+				<h5 class="mb-0">@workshop.Key</h5>
+			</div>
+			<div class="card-body">
+				<table class="table table-sm table-hover">
+					<thead>
+						<tr>
+							<th>Full Name</th>
+							<th>Workshop</th>
+							<th>Accommodation</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var registration in workshop.Value)
+						{
+							<tr>
+								<td>@registration.FullName</td>
+								<td>@registration.WorkshopName</td>
+								<td>@(registration.NeedsAccommodation ? "Yes" : "No")</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	}
+}
+else
+{
+	<div class="alert alert-info" role="alert">
+		No registrations yet. <a asp-action="RSVPForm" class="alert-link">Register for a workshop</a>
+	</div>
+}
+
+<div class="mt-4">
+	<a asp-action="RSVPForm" class="btn btn-primary">Register for another workshop</a>
+	<a asp-action="Index" class="btn btn-secondary">Back to Home</a>
+</div>
+

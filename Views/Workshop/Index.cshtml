@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+	ViewData["Title"] = "Workshop Registration";
+}
+
+<div class ="p-4 mb-4 bg-light rounded-3">
+	<h1 class="display-5">Workshop RSVP</h1>
+	<p class="lead">Please fill out the form below to register for a workshop.
+				Pick a session, tell us if you need accomodatipn</p>
+<hr />
+<p>Available Workshop: Routing Basics, EF Core Intro, Razor Essentials</p>
+<a asp-controller="Workshop" asp-action="RSVPForm" class="btn btn-online-secondary btn-lg">
+	View Registration
+	</a>
+
+</div>

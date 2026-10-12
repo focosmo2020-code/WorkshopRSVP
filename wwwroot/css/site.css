@@ -9,7 +9,72 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #0052a3;
+}
+
+/* Professional blue and pink theme */
+.btn-primary {
+  background-color: #0052a3;
+  border-color: #0052a3;
+}
+
+.btn-primary:hover {
+  background-color: #003d7a;
+  border-color: #003d7a;
+}
+
+.btn-secondary {
+  background-color: #d946a6;
+  border-color: #d946a6;
+}
+
+.btn-secondary:hover {
+  background-color: #b8358a;
+  border-color: #b8358a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0052a3;
+}
+
+.form-control:focus {
+  border-color: #0052a3;
+}
+
+.card-header {
+  background-color: #0052a3;
+  color: white;
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.alert-success strong {
+  color: #d946a6;
+}
+
+.badge {
+  background-color: #d946a6;
+}
+
+.badge.bg-success {
+  background-color: #4caf50 !important;
+}
+
+.form-check-input:checked {
+  background-color: #d946a6;
+  border-color: #d946a6;
+}
+
+a {
+  color: #0052a3;
+}
+
+a:hover {
+  color: #d946a6;
 }
 
 html {
@@ -19,4 +84,18 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+/* Form styling with pink accents */
+.form-label {
+  font-weight: 500;
+  color: #0052a3;
+}
+
+.form-control {
+  border-color: #ccc;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
 }

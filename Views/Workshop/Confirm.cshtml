@@ -1,0 +1,33 @@
+﻿@model RSVP
+
+@{
+	ViewData["Title"] = "Registration Confirmed";
+}
+
+<h1>Registration Confirmed</h1>
+
+<div class="alert alert-success" role="alert">
+	@ViewData["Message"]
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Your Registration Details</h5>
+		<dl class="row">
+			<dt class="col-sm-3">Full Name:</dt>
+			<dd class="col-sm-9">@Model.FullName</dd>
+
+			<dt class="col-sm-3">Workshop:</dt>
+			<dd class="col-sm-9">@Model.WorkshopName</dd>
+
+			<dt class="col-sm-3">Accommodation:</dt>
+			<dd class="col-sm-9">@(Model.NeedsAccommodation ? "Yes" : "No")</dd>
+		</dl>
+	</div>
+</div>
+
+<div class="mt-4">
+	<a asp-action="RSVPForm" class="btn btn-primary">Register for another workshop</a>
+	<a asp-action="Registrations" class="btn btn-secondary">View all registrations</a>
+	<a asp-action="Index" class="btn btn-outline-secondary">Back</a>
+</div>
