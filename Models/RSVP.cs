@@ -3,6 +3,8 @@ namespace WorkshopRSVP.Models
 {
     public class RSVP
     {
+        public int Id { get; set; }   //primary key added
+
         [Required(ErrorMessage = "Enter your full name.")]
         [Display(Name = "Full Name")]
         public string FullName { get; set; } = string.Empty;
